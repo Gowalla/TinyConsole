@@ -13,7 +13,7 @@ open class TinyConsole {
     var textView: UITextView?
     var consoleController: TinyConsoleController
 
-    var shakeEnabled: Bool = false {
+    public var shakeEnabled: Bool = false {
         didSet {
             consoleController.shakeEnabled = shakeEnabled
         }
