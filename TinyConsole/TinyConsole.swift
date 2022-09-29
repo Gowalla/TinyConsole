@@ -12,6 +12,12 @@ open class TinyConsole {
     public static var shared = TinyConsole()
     var textView: UITextView?
     var consoleController: TinyConsoleController
+
+    var shakeEnabled: Bool = false {
+        didSet {
+            consoleController.shakeEnabled = shakeEnabled
+        }
+    }
     
     static var textAppearance: [NSAttributedString.Key: Any] = {
         return [

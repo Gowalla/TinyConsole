@@ -19,6 +19,8 @@ open class TinyConsoleController: UIViewController {
         case collapsed
         case expanded
     }
+
+    var shakeEnabled: Bool = false
     
     var rootViewController: UIViewController {
         didSet {
@@ -85,6 +87,8 @@ open class TinyConsoleController: UIViewController {
     }
 
     open override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        guard shakeEnabled else { return }
+
         if motion == .motionShake {
             toggleWindowMode()
         }
