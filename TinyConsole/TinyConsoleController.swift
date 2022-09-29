@@ -21,8 +21,8 @@ open class TinyConsoleController: UIViewController {
     }
 
     var shakeEnabled: Bool = false
-    
-    var rootViewController: UIViewController {
+
+    public var rootViewController: UIViewController {
         didSet {
             setupViewControllers()
             setupConstraints()
